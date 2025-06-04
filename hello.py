@@ -1,0 +1,1 @@
+print("heelo aku belajar py di hari pertama")
