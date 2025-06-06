@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mas Hendra Gunawan </title>
+    <title>Navigasi Responsif</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .icon {
+            display: none;
+            color: white;
+            padding: 14px 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+
+            .navbar.responsive {
+                position: relative;
+            }
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-    <a href="/about">About</a>  
-    <h1 aligen="center">Kamu Berada di halaman utma</h1>
-</nav>
-</body>
-</html>
+
+    <div class="navbar" id="myNavbar">
+        <a href="#home">Home</a>
+        <a href="#"></a>
+        <a href="#dokumen">Dokumen</a>
+        <a href="#aplikasi">Aplikasi</a>
+        <a href="/about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            &#9776; </a>
+    </div>
+
+    <div style="padding:20px; text-align: center;">
+        <h1>Selamat Datang!</h1>
+        <p>Gulir ke bawah untuk melihat bagaimana navigasi berfungsi pada ukuran layar yang berbeda.</p>
+        <p>Coba perkecil ukuran jendela browser Anda.</p>
+        <div style="height: 1000px; background-color: lightgray; margin-top: 50px;">
