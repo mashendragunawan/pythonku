@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mashendra</title>
+</head>
+<body>
+    <div class="contriner">
+        <h1 class="titlee">
+            BIODATA DIRI
+        </h1>
+        <div class="inputgroup">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" required>
+        </div>
+
+        <div class="inputgroup">
+            <label for="umur">umur</label>
+            <input type="number" id="umur" required>
+        </div>
+
+        <div class="inputgroup">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="inputgroup">
+            <label for="Alamat">Alamat</label>
+            <textarea id="Alamat" required>
+        </div>
+        <button type="submit">Simpan Biodata</button>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body{
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cf32 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .titilee{
+            text-align: center;
+            margin: 25px;
+            color: #2c3e50;
+            position: relative;
+            font-size: 28px;
+        }
+        .titilee::after{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: #3498db;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: underlineGrow 1.5s infinite alternate;
+        }
+</style>
+</html>
